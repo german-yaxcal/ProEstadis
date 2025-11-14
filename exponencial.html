@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exponencial - Calculadora de Probabilidades</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    
+    <header>
+        <h1>Calculadora de Distribuciones de Probabilidad</h1>
+    </header>
+
+    <nav class="menu-navegacion">
+        <a href="index.html">Página Principal</a>
+        <a href="binomial.html">Binomial</a>
+        <a href="poisson.html">Poisson</a>
+        <a href="exponencial.html" class="active">Exponencial</a>
+        <a href="normal.html">Normal</a>
+        <a href="acerca_de.html">Acerca de</a>
+    </nav>
+
+    <main>
+        <section class="contenedor">
+            
+            <div id="info">
+                <h3>Distribución Exponencial</h3>
+                <p>Modela el tiempo (x) que transcurre entre dos eventos consecutivos de un proceso de Poisson con una tasa promedio (λ).</p>
+            </div>
+
+            <div class="datos-curso">
+                <h4>Fórmula de Densidad: f(x)</h4>
+
+                <img src="imagenes/exponencialformula.png" 
+                alt="Fórmula de la distribución exponencial">
+
+                <p><strong>Variables:</strong></p>
+                <ul>
+                    <li><strong>λ (lambda):</strong> Tasa promedio de eventos.</li>
+                    <li><strong>x:</strong> Valor de tiempo.</li>
+                    <li><strong>e:</strong> Constante de Euler.</li>
+                </ul>
+            </div>
+
+            <div id="formulario">
+                <div class="form-group">
+                    <label for="lambda"><i class="fa-solid fa-wave-square"></i> λ (tasa promedio):</label>
+                    <input id="lambda" type="number" step="0.01">
+                </div>
+                <div class="form-group">
+                    <label for="x"><i class="fa-solid fa-stopwatch"></i> x (valor de tiempo):</label>
+                    <input id="x" type="number" step="0.01">
+                </div>
+                <button id="btnCalcular" class="form-group">Calcular</button>
+            </div>
+
+            <div id="resultado"></div>
+
+            <canvas id="grafico" width="400" height="200" style="margin-top: 20px;"></canvas>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>Proyecto de Estadística - 2025</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/main.js"></script> <script src="js/js/exponencial.js"></script> </body>
+</html>
